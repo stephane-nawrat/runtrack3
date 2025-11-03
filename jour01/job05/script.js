@@ -14,13 +14,12 @@ function showDaysWeeks() {
   }
 }
 
-//test (affichage console)
 showDaysWeeks();
 
-/* FONCTION showdaysweeks SANS paramètre
-    CRÉER tableau daysweeks contenant ["Lundi", "Mardi", ..., "Dimanche"]
+/* FONCTION showDaysWeeks SANS paramètre
+    CRÉER tableau daysWeeks contenant ["Lundi", "Mardi", ..., "Dimanche"]
     
-    POUR chaque position initcount de 0 à 6
-        AFFICHER daysweeks[initcount]
+    POUR chaque position index de 0 à 6
+        AFFICHER daysWeeks[index]
     FIN POUR
 FIN FONCTION */
