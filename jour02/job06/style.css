@@ -1,0 +1,19 @@
+/* Pas de style par défaut */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Menlo";
+}
+
+/* Style La Plateforme appliqué par le script.js) */
+body.konami {
+  background-color: #00a8e8; /* Noir */
+}
+
+body.konami h1 {
+  color: #ffffff; /* Bleu La Plateforme */
+}
+
+body.konami p {
+  color: #000000;
+}
