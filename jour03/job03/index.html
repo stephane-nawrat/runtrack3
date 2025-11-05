@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jour03 - Job03 - Jeu du Taquin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Jeu du Taquin</h1>
+    <p>Cliquez sur une pièce adjacente à la case vide pour la déplacer</p>
+
+    <!-- Bouton mélanger (visible au début) -->
+    <button id="shuffleButton">Mélanger</button>
+
+    <!-- Bouton recommencer (caché au début, visible à la victoire) -->
+    <button id="restartButton" style="display: none">Recommencer</button>
+
+    <!-- Grille du jeu (3x3) -->
+    <div id="puzzle">
+      <!-- Les 9 cases seront générées par JavaScript -->
+    </div>
+
+    <!-- Message de victoire -->
+    <div id="message"></div>
+
+    <script src="jquery-3.7.1.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
