@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jour06 - Job03 - Sections Responsive</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Layout Responsive - 4 Sections</h1>
+    <div class="container">
+      <section class="section">Section 1</section>
+      <section class="section">Section 2</section>
+      <section class="section">Section 3</section>
+      <section class="section">Section 4</section>
+    </div>
+
+    <!-- Affichage de la résolution -->
+    <div class="resolution-info">Largeur : <span id="width">0</span>px</div>
+
+    <script>
+      function updateWidth() {
+        document.getElementById("width").textContent = window.innerWidth;
+      }
+      updateWidth();
+      window.addEventListener("resize", updateWidth);
+    </script>
+  </body>
+</html>
