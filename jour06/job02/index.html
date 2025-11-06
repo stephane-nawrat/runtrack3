@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries - Couleurs de fond</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="info">
+      <h1>Media Queries</h1>
+      <p>Redimensionnez votre fenêtre pour voir la couleur de fond changer.</p>
+    </div>
+
+    <!-- Affichage de la résolution actuelle -->
+    <div class="resolution-info">
+      Largeur écran : <span id="width">0</span>px
+    </div>
+
+    <script>
+      // Afficher la largeur de l'écran en temps réel
+      function updateWidth() {
+        document.getElementById("width").textContent = window.innerWidth;
+      }
+
+      updateWidth();
+      window.addEventListener("resize", updateWidth);
+    </script>
+  </body>
+</html>
