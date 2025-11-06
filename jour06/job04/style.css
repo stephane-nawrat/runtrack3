@@ -1,0 +1,189 @@
+/* =========================== */
+/* STYLES DE BASE (inchangés) */
+/* =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  background-color: #f5f5f5;
+  padding: 20px;
+  padding-top: 80px; /* Espace pour le header fixe */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section {
+  background-color: #88c1d0;
+  padding: 60px 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* =========================== */
+/* HEADER ET NAVIGATION */
+/* =========================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 15px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo/titre du site (optionnel) */
+.nav-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Liste des liens (desktop) */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #88c1d0;
+}
+
+/* Bouton hamburger (caché par défaut) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* =========================== */
+/* MEDIA QUERIES */
+/* =========================== */
+
+/* Desktop large (≥ 1600px) : 4 colonnes */
+@media screen and (min-width: 1600px) {
+  .container {
+    flex-wrap: nowrap;
+  }
+
+  .section {
+    flex: 1;
+  }
+}
+
+/* Tablette/Desktop (768px - 1599px) : 2 colonnes */
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .section {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+/* Mobile (≤ 767px) : Hamburger menu */
+@media screen and (max-width: 767px) {
+  /* Cacher la navigation par défaut */
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Afficher la navigation quand la classe 'show' est active */
+  .nav-list.show {
+    display: flex;
+  }
+
+  /* Afficher le bouton hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Animation du hamburger en croix quand actif */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+
+/* =========================== */
+/* INFO RESOLUTION */
+/* =========================== */
+.resolution-info {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 14px;
+  z-index: 1000;
+}
