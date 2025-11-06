@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jour06 - Job01 - Media Queries</title>
+
+    <!-- ================================================================== -->
+    <!-- MEDIA QUERIES : Charger le bon CSS selon la largeur d'écran       -->
+    <!-- ================================================================== -->
+
+    <!-- Style 1 : Par défaut (> 1920px) -->
+    <link rel="stylesheet" href="style1.css" media="(min-width: 1920px)" />
+
+    <!-- Style 2 : Entre 1680px et 1920px -->
+    <link
+      rel="stylesheet"
+      href="style2.css"
+      media="(min-width: 1680px) and (max-width: 1919px)"
+    />
+
+    <!-- Style 3 : Entre 1280px et 1680px -->
+    <link
+      rel="stylesheet"
+      href="style3.css"
+      media="(min-width: 1280px) and (max-width: 1679px)"
+    />
+
+    <!-- Style 4 : Inférieur à 1280px -->
+    <link rel="stylesheet" href="style4.css" media="(max-width: 1279px)" />
+
+    <style>
+      /* Affichage de la résolution actuelle */
+      .resolution-info {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-family: Menlo, Monaco, "Courier New", monospace;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <h1>Media Queries</h1>
+      <p>Redimensionnez votre fenêtre pour voir les différents styles.</p>
+    </div>
+
+    <!-- Afficher la résolution actuelle -->
+    <div class="resolution-info">
+      Largeur écran : <span id="width">0</span>px
+    </div>
+
+    <script>
+      // Afficher la largeur de l'écran en temps réel
+      function updateWidth() {
+        document.getElementById("width").textContent = window.innerWidth;
+      }
+
+      // Au chargement
+      updateWidth();
+
+      // Lors du redimensionnement
+      window.addEventListener("resize", updateWidth);
+    </script>
+  </body>
+</html>
