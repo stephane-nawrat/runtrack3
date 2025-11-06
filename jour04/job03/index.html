@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jour04 - Job 03 - Filtre Pokémon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Filtrer les Pokémon</h1>
+
+    <!-- Formulaire de filtrage -->
+    <form id="filterForm">
+      <!-- Champ ID -->
+      <div class="form-group">
+        <label for="id">ID :</label>
+        <input type="text" id="id" name="id" placeholder="Ex: 25" />
+      </div>
+
+      <!-- Champ Nom -->
+      <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" placeholder="Ex: Pikachu" />
+      </div>
+
+      <!-- Liste déroulante Type -->
+      <div class="form-group">
+        <label for="type">Type :</label>
+        <select id="type" name="type">
+          <option value="">-- Tous les types --</option>
+          <option value="Normal">Normal</option>
+          <option value="Fire">Fire</option>
+          <option value="Water">Water</option>
+          <option value="Electric">Electric</option>
+          <option value="Grass">Grass</option>
+          <option value="Ice">Ice</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Poison">Poison</option>
+          <option value="Ground">Ground</option>
+          <option value="Flying">Flying</option>
+          <option value="Psychic">Psychic</option>
+          <option value="Bug">Bug</option>
+          <option value="Rock">Rock</option>
+          <option value="Ghost">Ghost</option>
+          <option value="Dragon">Dragon</option>
+          <option value="Dark">Dark</option>
+          <option value="Steel">Steel</option>
+          <option value="Fairy">Fairy</option>
+        </select>
+      </div>
+
+      <!-- Liste déroulante Tri -->
+      <div class="form-group">
+        <label for="sort">Trier par :</label>
+        <select id="sort" name="sort">
+          <option value="id-asc">ID (croissant)</option>
+          <option value="id-desc">ID (décroissant)</option>
+          <option value="name-asc">Nom (A-Z)</option>
+          <option value="name-desc">Nom (Z-A)</option>
+          <option value="hp-desc">HP (plus fort)</option>
+          <option value="attack-desc">Attaque (plus fort)</option>
+        </select>
+      </div>
+
+      <!-- Boutons -->
+      <div class="form-group">
+        <button type="button" id="filterButton">Filtrer</button>
+        <button type="button" id="resetButton">Réinitialiser</button>
+        <button type="button" id="loadAllButton">Afficher tous</button>
+      </div>
+    </form>
+
+    <!-- Compteur de résultats -->
+    <div id="counter"></div>
+
+    <!-- Zone d'affichage des résultats -->
+    <div id="results">
+      <p class="info">Utilisez le formulaire pour filtrer les Pokémon</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
