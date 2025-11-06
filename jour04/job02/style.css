@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  color: #333;
+}
+
+.result {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #4caf50;
+  border-radius: 5px;
+}
+
+code {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+}
+
+pre {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
