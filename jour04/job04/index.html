@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jour 4 - Job 04 - Utilisateurs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Liste des Utilisateurs</h1>
+
+      <!-- Bouton pour mettre à jour (AJAX) -->
+      <button id="updateButton">Update</button>
+
+      <!-- Info : nombre d'utilisateurs -->
+      <div id="userCount"></div>
+
+      <!-- Tableau HTML (vide au départ) -->
+      <table id="usersTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="usersTableBody">
+          <!-- Les lignes seront ajoutées ici par JavaScript -->
+        </tbody>
+      </table>
+
+      <!-- Message de chargement -->
+      <div id="loading" style="display: none">Chargement en cours...</div>
+
+      <!-- Message d'erreur -->
+      <div id="error" style="display: none"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
