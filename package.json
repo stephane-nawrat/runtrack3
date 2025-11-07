@@ -1,0 +1,24 @@
+{
+  "name": "runtrack3",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/stephane-nawrat/runtrack3#readme",
+  "bugs": {
+    "url": "https://github.com/stephane-nawrat/runtrack3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephane-nawrat/runtrack3.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @tailwindcss/cli -i ./src/style.css -o ./src/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
